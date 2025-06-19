@@ -1,0 +1,889 @@
+/* ================================================
+   EVOLUSOM - TEMA PERSONALIZADO 
+   Sistema de cores harmoniosas para equipamentos de som
+   Classes humanizadas em português brasileiro
+================================================ */
+
+/* ================================================
+   CORES E ESTILOS BASE
+================================================ */
+
+.evolusom-azul-profundo {
+  color: #1a237e !important;
+}
+
+.evolusom-fundo-azul-profundo {
+  background-color: #1a237e !important;
+}
+
+.evolusom-indigo {
+  color: #3f51b5 !important;
+}
+
+.evolusom-fundo-indigo {
+  background-color: #3f51b5 !important;
+}
+
+.evolusom-laranja-vibrante {
+  color: #ff6f00 !important;
+}
+
+.evolusom-fundo-laranja-vibrante {
+  background-color: #ff6f00 !important;
+}
+
+.evolusom-verde-sucesso {
+  color: #2e7d32 !important;
+}
+
+.evolusom-fundo-verde-sucesso {
+  background-color: #2e7d32 !important;
+}
+
+.evolusom-vermelho-perigo {
+  color: #c62828 !important;
+}
+
+.evolusom-fundo-vermelho-perigo {
+  background-color: #c62828 !important;
+}
+
+/* ================================================
+   BOTÕES MODERNOS E ELEGANTES
+================================================ */
+
+.botao-evolusom-principal {
+  background: linear-gradient(135deg, #1a237e 0%, #3f51b5 100%);
+  border: none;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(26, 35, 126, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.botao-evolusom-principal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s;
+}
+
+.botao-evolusom-principal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(26, 35, 126, 0.3);
+  color: #ffffff;
+}
+
+.botao-evolusom-principal:hover::before {
+  left: 100%;
+}
+
+.botao-evolusom-destaque {
+  background: linear-gradient(135deg, #ff6f00 0%, #f57c00 100%);
+  border: none;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(245, 124, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.botao-evolusom-destaque::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s;
+}
+
+.botao-evolusom-destaque:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(245, 124, 0, 0.3);
+  color: #ffffff;
+}
+
+.botao-evolusom-destaque:hover::before {
+  left: 100%;
+}
+
+.botao-evolusom-sucesso {
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+  border: none;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+}
+
+.botao-evolusom-sucesso:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(46, 125, 50, 0.3);
+  color: #ffffff;
+}
+
+.botao-evolusom-contorno {
+  background: transparent;
+  border: 3px solid #1a237e;
+  color: #1a237e;
+  padding: 12px 26px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.botao-evolusom-contorno::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #1a237e;
+  transition: left 0.3s;
+  z-index: -1;
+}
+
+.botao-evolusom-contorno:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 35, 126, 0.2);
+}
+
+.botao-evolusom-contorno:hover::before {
+  left: 0;
+}
+
+.botao-evolusom-pequeno {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+}
+
+.botao-evolusom-grande {
+  padding: 18px 36px;
+  font-size: 1.1rem;
+  border-radius: 16px;
+}
+
+/* ================================================
+   FORMULÁRIOS ULTRA MODERNOS
+================================================ */
+
+.container-formulario-evolusom {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 50px rgba(26, 35, 126, 0.15);
+  border: 1px solid #e8eaf6;
+  position: relative;
+  overflow: hidden;
+}
+
+.container-formulario-evolusom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, rgba(255, 111, 0, 0.1) 0%, rgba(245, 124, 0, 0.05) 100%);
+  border-radius: 50%;
+  transform: translate(40px, -40px);
+}
+
+.cabecalho-formulario-evolusom {
+  background: linear-gradient(135deg, #1a237e 0%, #3f51b5 100%);
+  color: #ffffff;
+  padding: 32px 40px;
+  border-radius: 20px 20px 0 0;
+  margin: -40px -40px 40px -40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cabecalho-formulario-evolusom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(50px, -50px);
+}
+
+.cabecalho-formulario-evolusom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  transform: translate(-30px, 30px);
+}
+
+.titulo-formulario-evolusom {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  position: relative;
+  z-index: 1;
+}
+
+.subtitulo-formulario-evolusom {
+  margin: 10px 0 0 0;
+  opacity: 0.95;
+  font-size: 1rem;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+
+.grupo-campo-evolusom {
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.rotulo-campo-evolusom {
+  display: block;
+  font-weight: 700;
+  color: #212121;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.rotulo-campo-evolusom::after {
+  content: '*';
+  color: #c62828;
+  margin-left: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.rotulo-campo-evolusom.obrigatorio::after {
+  opacity: 1;
+}
+
+.campo-texto-evolusom {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #fafafa;
+  color: #212121;
+  position: relative;
+}
+
+.campo-texto-evolusom::placeholder {
+  color: #9e9e9e;
+  font-style: italic;
+}
+
+.campo-texto-evolusom:focus {
+  outline: none;
+  border-color: #1a237e;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(26, 35, 126, 0.1);
+  transform: translateY(-2px);
+}
+
+.campo-texto-evolusom.campo-valido {
+  border-color: #2e7d32;
+  background: #f1f8e9;
+  box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.1);
+}
+
+.campo-texto-evolusom.campo-invalido {
+  border-color: #c62828;
+  background: #ffebee;
+  box-shadow: 0 0 0 4px rgba(198, 40, 40, 0.1);
+}
+
+.selecao-evolusom {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #fafafa;
+  color: #212121;
+  cursor: pointer;
+}
+
+.selecao-evolusom:focus {
+  outline: none;
+  border-color: #1a237e;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(26, 35, 126, 0.1);
+  transform: translateY(-2px);
+}
+
+.area-texto-evolusom {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #fafafa;
+  color: #212121;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.area-texto-evolusom:focus {
+  outline: none;
+  border-color: #1a237e;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(26, 35, 126, 0.1);
+  transform: translateY(-2px);
+}
+
+.grupo-entrada-evolusom {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.prefixo-entrada-evolusom {
+  background: linear-gradient(135deg, #e8eaf6 0%, #f3e5f5 100%);
+  border: 2px solid #e0e0e0;
+  border-right: none;
+  border-radius: 12px 0 0 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  color: #1a237e;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.grupo-entrada-evolusom .campo-texto-evolusom {
+  border-radius: 0 12px 12px 0;
+  border-left: none;
+}
+
+.grupo-entrada-evolusom .campo-texto-evolusom:focus {
+  border-left: 2px solid #1a237e;
+}
+
+/* ================================================
+   CARDS DE INFORMAÇÃO MODERNOS
+================================================ */
+
+.cartao-informacao-evolusom {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 30px rgba(26, 35, 126, 0.12);
+  border: 1px solid #e8eaf6;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cartao-informacao-evolusom:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(26, 35, 126, 0.18);
+}
+
+.cartao-informacao-evolusom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #1a237e 0%, #3f51b5 100%);
+}
+
+.cabecalho-cartao-evolusom {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.icone-cartao-evolusom {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #1a237e 0%, #3f51b5 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-right: 16px;
+}
+
+.titulo-cartao-evolusom {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #212121;
+  letter-spacing: 0.4px;
+}
+
+.item-informacao-evolusom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.item-informacao-evolusom:last-child {
+  border-bottom: none;
+}
+
+.rotulo-informacao-evolusom {
+  font-weight: 600;
+  color: #757575;
+  font-size: 0.95rem;
+}
+
+.valor-informacao-evolusom {
+  font-weight: 700;
+  color: #212121;
+  font-size: 1rem;
+  text-align: right;
+}
+
+/* ================================================
+   BADGES E ETIQUETAS COLORIDAS
+================================================ */
+
+.etiqueta-evolusom {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.etiqueta-principal-evolusom {
+  background: linear-gradient(135deg, #1a237e 0%, #3f51b5 100%);
+  color: #ffffff;
+}
+
+.etiqueta-sucesso-evolusom {
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+  color: #ffffff;
+}
+
+.etiqueta-alerta-evolusom {
+  background: linear-gradient(135deg, #f57c00 0%, #ff9800 100%);
+  color: #ffffff;
+}
+
+.etiqueta-perigo-evolusom {
+  background: linear-gradient(135deg, #c62828 0%, #f44336 100%);
+  color: #ffffff;
+}
+
+.etiqueta-info-evolusom {
+  background: linear-gradient(135deg, #0277bd 0%, #03a9f4 100%);
+  color: #ffffff;
+}
+
+/* ================================================
+   ANIMAÇÕES SUAVES
+================================================ */
+
+.animacao-aparecer-evolusom {
+  animation: evoluSomAparecer 0.6s ease-out;
+}
+
+@keyframes evoluSomAparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animacao-deslizar-evolusom {
+  animation: evoluSomDeslizar 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes evoluSomDeslizar {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================================================
+   LAYOUT RESPONSIVO DOS FORMULÁRIOS
+================================================ */
+
+.linha-formulario-evolusom {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 0;
+}
+
+.linha-formulario-evolusom .grupo-campo-evolusom {
+  flex: 1;
+}
+
+.linha-tercos-evolusom {
+  display: flex;
+  gap: 16px;
+}
+
+.linha-tercos-evolusom .grupo-campo-evolusom {
+  flex: 1;
+}
+
+.campo-completo-evolusom {
+  width: 100%;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .linha-formulario-evolusom,
+  .linha-tercos-evolusom {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .container-formulario-evolusom {
+    padding: 24px;
+    border-radius: 16px;
+  }
+  
+  .cabecalho-formulario-evolusom {
+    padding: 24px;
+    margin: -24px -24px 24px -24px;
+    border-radius: 16px 16px 0 0;
+  }
+  
+  .titulo-formulario-evolusom {
+    font-size: 1.5rem;
+  }
+}
+
+/* ================================================
+   BOTÕES DE AÇÃO E GRUPOS
+================================================ */
+
+.botoes-acao-evolusom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 2px solid #f5f5f5;
+}
+
+.grupo-botoes-evolusom {
+  display: flex;
+  gap: 12px;
+}
+
+.grupo-botoes-evolusom .botao-evolusom-principal,
+.grupo-botoes-evolusom .botao-evolusom-destaque,
+.grupo-botoes-evolusom .botao-evolusom-sucesso,
+.grupo-botoes-evolusom .botao-evolusom-contorno {
+  margin: 0;
+}
+
+/* ================================================
+   FEEDBACK DE VALIDAÇÃO
+================================================ */
+
+.feedback-validacao-evolusom {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.feedback-validacao-evolusom.valido {
+  color: #2e7d32;
+}
+
+.feedback-validacao-evolusom.invalido {
+  color: #c62828;
+}
+
+.campo-texto-evolusom.carregando {
+  background: linear-gradient(90deg, #fafafa 25%, #f0f0f0 50%, #fafafa 75%);
+  background-size: 200% 100%;
+  animation: evoluSomCarregamento 1.5s infinite;
+}
+
+@keyframes evoluSomCarregamento {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ================================================
+   RESPONSIVIDADE AVANÇADA
+================================================ */
+
+@media (max-width: 992px) {
+  .container-formulario-evolusom {
+    padding: 32px;
+  }
+  
+  .cabecalho-formulario-evolusom {
+    padding: 28px 32px;
+    margin: -32px -32px 32px -32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-formulario-evolusom {
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .cabecalho-formulario-evolusom {
+    padding: 20px;
+    margin: -20px -20px 20px -20px;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .botoes-acao-evolusom {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .grupo-botoes-evolusom {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .grupo-botoes-evolusom .botao-evolusom-principal,
+  .grupo-botoes-evolusom .botao-evolusom-destaque,
+  .grupo-botoes-evolusom .botao-evolusom-sucesso,
+  .grupo-botoes-evolusom .botao-evolusom-contorno {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ================================================
+   UTILITÁRIOS EXTRAS
+================================================ */
+
+.espacamento-superior-evolusom {
+  margin-top: 24px;
+}
+
+.espacamento-inferior-evolusom {
+  margin-bottom: 24px;
+}
+
+.texto-centralizado-evolusom {
+  text-align: center;
+}
+
+.sombra-suave-evolusom {
+  box-shadow: 0 4px 15px rgba(26, 35, 126, 0.1);
+}
+
+.sombra-media-evolusom {
+  box-shadow: 0 8px 25px rgba(26, 35, 126, 0.15);
+}
+
+.sombra-forte-evolusom {
+  box-shadow: 0 12px 35px rgba(26, 35, 126, 0.2);
+}
+
+/* ================================================
+   ALIASES DE COMPATIBILIDADE 
+   Garantir que todas as classes antigas continuem funcionando
+================================================ */
+
+/* Compatibilidade com botões antigos */
+.btn.btn-gradient-primary {
+  background: linear-gradient(135deg, #1a237e 0%, #3f51b5 100%) !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.8px !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 15px rgba(26, 35, 126, 0.2) !important;
+}
+
+.btn.btn-gradient-primary:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(26, 35, 126, 0.3) !important;
+  color: #ffffff !important;
+}
+
+/* Compatibilidade com formulários antigos */
+.form-control {
+  border: 2px solid #e0e0e0 !important;
+  border-radius: 12px !important;
+  padding: 14px 16px !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  background: #fafafa !important;
+}
+
+.form-control:focus {
+  border-color: #1a237e !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 4px rgba(26, 35, 126, 0.1) !important;
+  outline: none !important;
+}
+
+/* Compatibilidade com cards antigos */
+.card {
+  border-radius: 16px !important;
+  box-shadow: 0 8px 30px rgba(26, 35, 126, 0.12) !important;
+  border: 1px solid #e8eaf6 !important;
+}
+
+.card-title {
+  font-weight: 700 !important;
+  color: #1a237e !important;
+}
+
+/* Compatibilidade com badges antigos */
+.badge.badge-success {
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%) !important;
+  color: #ffffff !important;
+  padding: 6px 14px !important;
+  border-radius: 20px !important;
+  font-weight: 700 !important;
+}
+
+.badge.badge-info {
+  background: linear-gradient(135deg, #0277bd 0%, #03a9f4 100%) !important;
+  color: #ffffff !important;
+  padding: 6px 14px !important;
+  border-radius: 20px !important;
+  font-weight: 700 !important;
+}
+
+.badge.badge-warning {
+  background: linear-gradient(135deg, #f57c00 0%, #ff9800 100%) !important;
+  color: #ffffff !important;
+  padding: 6px 14px !important;
+  border-radius: 20px !important;
+  font-weight: 700 !important;
+}
+
+.badge.badge-danger {
+  background: linear-gradient(135deg, #c62828 0%, #f44336 100%) !important;
+  color: #ffffff !important;
+  padding: 6px 14px !important;
+  border-radius: 20px !important;
+  font-weight: 700 !important;
+}
+
+/* Compatibilidade com tabelas */
+.table th {
+  background: linear-gradient(135deg, #1a237e 0%, #3f51b5 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border: none !important;
+  padding: 16px !important;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f8f9ff !important;
+}
+
+/* Garantir que o layout responsivo continue funcionando */
+.flex_adicionar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 24px !important;
+}
+
+/* ================================================
+   MELHORIAS PROGRESSIVAS
+   Aplicadas automaticamente a elementos existentes
+================================================ */
+
+/* Todos os formulários ficam mais bonitos automaticamente */
+.forms-sample .form-group {
+  margin-bottom: 24px !important;
+}
+
+.forms-sample label {
+  font-weight: 600 !important;
+  color: #212121 !important;
+  margin-bottom: 8px !important;
+}
+
+/* Todas as tabelas ficam mais modernas */
+.table-responsive {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 15px rgba(26, 35, 126, 0.1) !important;
+}
+
+/* Todos os botões pequenos ficam melhores */
+.btn-sm {
+  padding: 8px 16px !important;
+  font-size: 0.85rem !important;
+  border-radius: 8px !important;
+}
+
+/* Melhorias nos dropdowns */
+.dropdown-menu {
+  border-radius: 12px !important;
+  box-shadow: 0 8px 25px rgba(26, 35, 126, 0.15) !important;
+  border: 1px solid #e8eaf6 !important;
+}
+
+.dropdown-item:hover {
+  background: #f8f9ff !important;
+  color: #1a237e !important;
+} 

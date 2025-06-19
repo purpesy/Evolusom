@@ -1,0 +1,389 @@
+/**
+ * MODAL DE LOGIN - CSS ESPECÍFICO
+ * Sistema de modal responsivo e funcional para todas as páginas
+ */
+
+/* Reset específico para modal - previne conflitos */
+.evolusom-modal * {
+    box-sizing: border-box !important;
+}
+
+/* Override para qualquer conflito de CSS */
+body.modal-open {
+    overflow: hidden !important;
+    padding-right: 0 !important;
+}
+
+/* OVERRIDES ESPECÍFICOS PARA CONFLITOS BOOTSTRAP/OUTROS MODAIS */
+.evolusom-modal:not(.modal) {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* Garantir que nosso modal sempre apareça */
+#modalLogin.evolusom-modal {
+    display: none !important;
+}
+
+#modalLogin.evolusom-modal[style*="flex"] {
+    display: flex !important;
+}
+
+/* Container do Modal - Base COM PRIORIDADE MÁXIMA */
+.evolusom-modal {
+    display: none !important;
+    position: fixed !important;
+    z-index: 99999 !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    overflow: auto !important;
+    backdrop-filter: blur(8px) !important;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Mostra o modal */
+.evolusom-modal.show {
+    opacity: 1;
+}
+
+/* Conteúdo do Modal COM PRIORIDADE */
+.evolusom-modal-content {
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%) !important;
+    margin: auto !important;
+    padding: 60px 50px !important;
+    border-radius: 20px !important;
+    width: 95% !important;
+    max-width: 550px !important;
+    min-height: 420px !important;
+    position: relative !important;
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.2),
+        0 15px 30px rgba(108, 117, 125, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+    transform: scale(0.7) rotateX(10deg) !important;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    border: 3px solid rgba(108, 117, 125, 0.2) !important;
+    backdrop-filter: blur(15px) !important;
+    perspective: 1000px !important;
+}
+
+.evolusom-modal.show .evolusom-modal-content {
+    transform: scale(1) rotateX(0deg);
+}
+
+/* Botão Fechar */
+.evolusom-modal-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #6c757d;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    line-height: 1;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(108, 117, 125, 0.1);
+}
+
+.evolusom-modal-close:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #495057, #343a40);
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 0 6px 20px rgba(108, 117, 125, 0.3);
+}
+
+/* Título do Modal */
+.evolusom-modal h2 {
+    margin-bottom: 45px;
+    text-align: center;
+    background: linear-gradient(135deg, #495057, #343a40, #212529);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 32px;
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+.evolusom-modal h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #495057, #343a40);
+    border-radius: 2px;
+    animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+    0% { box-shadow: 0 0 5px rgba(73, 80, 87, 0.3); }
+    100% { box-shadow: 0 0 15px rgba(73, 80, 87, 0.6); }
+}
+
+/* Formulário */
+.evolusom-modal-form {
+    width: 100%;
+}
+
+/* Grupos de Campo */
+.evolusom-field-group {
+    margin-bottom: 35px;
+    position: relative;
+}
+
+/* Labels */
+.evolusom-field-group label {
+    display: block;
+    margin-bottom: 12px;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Inputs */
+.evolusom-field-group input {
+    width: 100%;
+    padding: 22px 25px;
+    border: 3px solid #e9ecef;
+    border-radius: 12px;
+    font-size: 18px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-sizing: border-box;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    position: relative;
+    backdrop-filter: blur(5px);
+    font-weight: 500;
+}
+
+.evolusom-field-group input:focus {
+    border-color: #495057;
+    outline: none;
+    box-shadow: 
+        0 0 0 4px rgba(73, 80, 87, 0.1),
+        0 8px 25px rgba(73, 80, 87, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    background: #ffffff;
+}
+
+.evolusom-field-group input:hover {
+    border-color: #343a40;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(73, 80, 87, 0.1);
+}
+
+.evolusom-field-group input::placeholder {
+    color: #999;
+}
+
+/* Botão Submit */
+.evolusom-submit-btn {
+    width: 100%;
+    padding: 22px 30px;
+    background: linear-gradient(135deg, #495057 0%, #343a40 50%, #212529 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 
+        0 12px 30px rgba(73, 80, 87, 0.4),
+        0 6px 15px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.evolusom-submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+}
+
+.evolusom-submit-btn:hover::before {
+    left: 100%;
+}
+
+.evolusom-submit-btn:hover {
+    background: linear-gradient(135deg, #343a40 0%, #212529 50%, #000000 100%);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 
+        0 15px 35px rgba(73, 80, 87, 0.5),
+        0 8px 20px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.evolusom-submit-btn:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 
+        0 5px 15px rgba(73, 80, 87, 0.4),
+        0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .evolusom-modal-content {
+        margin: 20px;
+        padding: 40px 30px;
+        width: calc(100% - 40px);
+        min-height: 380px;
+    }
+    
+    .evolusom-modal h2 {
+        font-size: 26px;
+        margin-bottom: 35px;
+        letter-spacing: 2px;
+    }
+    
+    .evolusom-field-group {
+        margin-bottom: 28px;
+    }
+    
+    .evolusom-field-group label {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    .evolusom-field-group input {
+        padding: 18px 20px;
+        font-size: 16px; /* Evita zoom no iOS */
+    }
+    
+    .evolusom-submit-btn {
+        padding: 18px 25px;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+}
+
+/* Animações */
+@keyframes modalFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.7) rotateX(10deg) translateY(-50px);
+        filter: blur(5px);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05) rotateX(-2deg) translateY(-10px);
+        filter: blur(1px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotateX(0deg) translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes modalFadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1) rotateX(0deg) translateY(0);
+        filter: blur(0);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.95) rotateX(5deg) translateY(20px);
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.7) rotateX(10deg) translateY(50px);
+        filter: blur(5px);
+    }
+}
+
+/* Estados especiais */
+.evolusom-modal.fade-in {
+    /* Animação de fundo removida */
+}
+
+.evolusom-modal.fade-in .evolusom-modal-content {
+    animation: modalFadeIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.evolusom-modal.fade-out .evolusom-modal-content {
+    animation: modalFadeOut 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Loading state */
+.evolusom-submit-btn.loading {
+    background: #6c757d;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.evolusom-submit-btn.loading::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    border: 2px solid transparent;
+    border-top: 2px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Override para outros modais */
+body.modal-open {
+    overflow: hidden !important;
+    padding-right: 0 !important;
+}
+
+/* Partículas de fundo removidas para visual mais limpo */
+
+/* Acessibilidade */
+.evolusom-modal:focus {
+    outline: none;
+}
+
+.evolusom-modal-close:focus {
+    outline: 2px solid #495057;
+    outline-offset: 2px;
+}
+
+.evolusom-field-group input:focus {
+    outline: none;
+}
+
+.evolusom-submit-btn:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+} 
