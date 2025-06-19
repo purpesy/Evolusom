@@ -9,19 +9,19 @@ if (session_status() === PHP_SESSION_NONE) {
 define('URL_BASE', 'http://localhost/Evolusom/public/');
 
 // config database
-define('DB_HOST', 'smpsistema.com.br');
-define('DB_NAME', 'u283879542_evollusom');
-define('DB_USER', 'u283879542_evollusom');
-define('DB_PASS', '_Tipi@03');
+define('DB_HOST', 'url');
+define('DB_NAME', 'dbname');
+define('DB_USER', 'dbuser');
+define('DB_PASS', 'dbpass');
 
 // Configurações de charset para evitar problemas de encoding
 define('DB_CHARSET', 'utf8');
 
 //config email
-define('EMAIL_HOST', 'smpsistema.com.br');
+define('EMAIL_HOST', 'url');
 define('EMAIL_PORT', '465');
-define('EMAIL_USER', 'tipi03@smpsistema.com.br');
-define('EMAIL_PASS', 'Senac@tipi03');
+define('EMAIL_USER', 'email');
+define('EMAIL_PASS', 'senha');
 
 // Configurações de timezone
 date_default_timezone_set('America/Sao_Paulo');
