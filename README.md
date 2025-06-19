@@ -164,8 +164,8 @@ Evolusom/
 
 6. **Acesse o sistema**
    - Frontend: `http://localhost/evolusom/public/`
-   - Admin: `http://localhost/evolusom/public/admin`
-
+   - Admin: `http://localhost/evolusom/public/dash`
+  Login: email: rafael.souza@loja.com senha: senha123
 ---
 
 ## 🎨 Demonstração
@@ -217,13 +217,10 @@ Evolusom/
 
 ## 🚀 Próximas Funcionalidades
 
-- [ ] **API RESTful** - Endpoints para aplicações móveis
 - [ ] **Sistema de Avaliações** - Reviews e ratings de produtos
 - [ ] **Carrinho de Compras** - E-commerce completo
 - [ ] **Gateway de Pagamento** - Integração com Stripe/PayPal
 - [ ] **Notificações Push** - Alertas em tempo real
-- [ ] **Chat Online** - Atendimento ao vivo
-- [ ] **App Mobile** - Versão para iOS/Android
 
 ---
 
@@ -241,13 +238,13 @@ Contribuições são sempre bem-vindas! Para contribuir:
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está sob a licença MIT.
 
 ---
 
 ## 👨‍💻 Autor
 
-**Seu Nome**
+**Lucas Gabriel**
 - LinkedIn: www.linkedin.com/in/lucas-dev-gabriel
 - Email: lucasgabdsantos@gmail.com
 - Portfolio: https://agenciatipi03.smpsistema.com.br/aluno/lucas/portfolio/
